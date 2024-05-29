@@ -1,6 +1,6 @@
 // src/models/User.js
 const { Schema, model } = require("mongoose");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const workstationSchema = new Schema({
   name: {
