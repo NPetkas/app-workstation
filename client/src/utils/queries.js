@@ -29,3 +29,22 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_TASKS = gql`
+  query getTasks {
+    tasks {
+      _id
+      taskText
+      taskAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
+

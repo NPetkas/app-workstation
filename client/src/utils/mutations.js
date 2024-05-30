@@ -54,3 +54,35 @@ export const REMOVE_WORKSTATION = gql`
     }
   }
 `;
+
+export const ADD_TASK = gql`
+  mutation addTask($taskText: String!) {
+    addTask(taskText: $taskText) {
+      _id
+      taskText
+      taskAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+      }
+      }
+    }
+  `;
+
+  export const ADD_COMMENT = gql`
+  mutation addComment($taskId: ID!, $commentText: String!) {
+    addComment(taskId: $taskId, commentText: $commentText) {
+      _id
+      taskText
+      taskAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        createdAt
+      }
+    }
+  }
+`;
+
