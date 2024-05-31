@@ -6,6 +6,7 @@ import { ADD_TASK } from '../../utils/mutations';
 import { QUERY_TASKS, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
+import auth from '../../utils/auth';
 
 const TaskForm = () => {
   const [taskText, setTaskText] = useState('');
@@ -24,11 +25,12 @@ const TaskForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log(Auth.getProfile())
     try {
       const { data } = await addTask({
         variables: {
           taskText,
-          taskAuthor: Auth.getProfile().authenticatedPerson.username,
+          taskAuthor: Auth.getProfile().data.name,
         },
       });
 

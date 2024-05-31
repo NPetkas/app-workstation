@@ -46,7 +46,7 @@ const resolvers = {
       if (context.user) {
         const task = await Task.create({
           taskText,
-          taskAuthor: context.user.username,
+          taskAuthor: context.user.name,
         });
 
         await User.findOneAndUpdate(
