@@ -5,31 +5,25 @@ export const QUERY_PROFILES = gql`
     users {
       _id
       name
-      skills
     }
   }
 `;
-
 export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
+  query singleProfile($userId: ID!) {
+    user(userId: $userId) {
       _id
       name
-      skills
     }
   }
 `;
-
 export const QUERY_ME = gql`
   query me {
     me {
       _id
       name
-      skills
     }
   }
 `;
-
 export const QUERY_TASKS = gql`
   query getTasks {
     tasks {
@@ -47,4 +41,20 @@ export const QUERY_TASKS = gql`
   }
 `;
 
+export const QUERY_SINGLE_TASK = gql`
+  query getSingleTask($taskId: ID!) {
+    tasks(taskId: $taskId) {
+      _id
+      taskText
+      taskAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
 

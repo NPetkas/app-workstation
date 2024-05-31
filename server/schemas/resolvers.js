@@ -15,6 +15,9 @@ const resolvers = {
       const params = username ? { username } : {};
       return Task.find(params).sort({ createdAt: -1 });
     },
+    task: async (parent, { taskId }) => {
+      return Task.findOne({ _id: taskId });
+    },
   },
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {

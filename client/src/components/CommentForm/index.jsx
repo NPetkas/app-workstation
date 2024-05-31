@@ -20,7 +20,7 @@ const CommentForm = ({ taskId }) => {
         variables: {
           taskId,
           commentText,
-          commentAuthor: Auth.getProfile().authenticatedPerson.username, // TODO: Display the user's username
+          commentAuthor: Auth.getProfile().data.name, // TODO: Display the user's username
         },
       });
 

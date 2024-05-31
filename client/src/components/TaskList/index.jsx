@@ -20,7 +20,7 @@ const TaskList = ({
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${task.taskAuthor}`}
+                  to={`/task/${task.taskAuthor}`}
                 >
                   {task.taskAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
