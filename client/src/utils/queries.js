@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const QUERY_PROFILES = gql`
   query allProfiles {
-    profiles {
+    users {
       _id
       name
       skills
@@ -29,3 +29,22 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_TASKS = gql`
+  query getTasks {
+    tasks {
+      _id
+      taskText
+      taskAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
+

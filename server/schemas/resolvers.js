@@ -1,6 +1,6 @@
 // src/schema/resolvers.js
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { User, Task } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -10,6 +10,10 @@ const resolvers = {
     },
     user: async (parent, { _id }) => {
       return User.findById(_id);
+    },
+    tasks: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Task.find(params).sort({ createdAt: -1 });
     },
   },
   Mutation: {
@@ -36,6 +40,76 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+
+    addTask: async (parent, { taskText }, context) => {
+      if (context.user) {
+        const task = await Task.create({
+          taskText,
+          taskAuthor: context.user.name,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { tasks: task._id } }
+        );
+
+        return task;
+      }
+      throw AuthenticationError;
+    },
+
+    removeTask: async (parent, { taskId }, context) => {
+      if (context.user) {
+        const task = await Task.findOneAndDelete({
+          _id: taskId,
+          taskAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { tasks: task._id } }
+        );
+
+        return task;
+      }
+      throw AuthenticationError;
+    },
+
+    addComment: async (parent, { taskId, commentText }, context) => {
+      if (context.user) {
+        return Task.findOneAndUpdate(
+          { _id: taskId },
+          {
+            $addToSet: {
+              comments: { commentText, commentAuthor: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw AuthenticationError;
+    },
+    
+    removeComment: async (parent, { taskId, commentId }, context) => {
+      if (context.user) {
+        return Task.findOneAndUpdate(
+          { _id: taskId },
+          {
+            $pull: {
+              comments: {
+                _id: commentId,
+                commentAuthor: context.user.username,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw AuthenticationError;
     },
 
     // addWorkstation: async (parent, { userId, name, description }) => {
