@@ -23,7 +23,7 @@ const SingleTask = () => {
   }
   return (
     <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
+      <h3 className="card-header text-light p-2 m-0">
         {task.taskAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
           task created on {task.createdAt}

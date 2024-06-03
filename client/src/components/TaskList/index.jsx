@@ -20,7 +20,7 @@ const TaskList = ({
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/task/${task.taskAuthor}`}
+                  to={`/task/${task._id}`}
                 >
                   {task.taskAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
@@ -40,7 +40,7 @@ const TaskList = ({
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
-              to={`/tasks/${task._id}`}
+              to={`/task/${task._id}`}
             >
               {/* Join the discussion on this task. */}
             </Link>

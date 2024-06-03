@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         element: <Task />
       },
       {
-        path: '/task/:taskID',
+        path: '/task/:taskId',
         element: <SingleTask />
       },
       // {
