@@ -19,10 +19,13 @@ export default function Nav() {
                 </Link>
             </li>
             <li className="nav-item">
-                <Link to="/notes" className= {currentPage === '/notes' ? 'nav-link active' : 'nav-link'} >
+                <Link to="/note" className= {currentPage === '/note' ? 'nav-link active' : 'nav-link'} >
                     Notes
                 </Link>
             </li>
+
+{/* how would i add a conditional statement to sign out */}
+        
             <li className="nav-item">
                 <Link to="/signup" className={ currentPage === '/signup' ? 'nav-link active' : 'nav-link'} >
                     SignUp

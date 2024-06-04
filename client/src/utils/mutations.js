@@ -86,3 +86,14 @@ export const ADD_TASK = gql`
   }
 `;
 
+export const ADD_NOTE = gql`
+  mutation addNote($noteContent: String!) {
+    addNote(noteContent: $noteContent) {
+      _id
+      noteContent
+      noteAuthor
+      createdAt
+    }
+  }
+`;
+

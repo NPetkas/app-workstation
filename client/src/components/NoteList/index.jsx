@@ -1,53 +1,47 @@
 import { Link } from 'react-router-dom';
 
-const TaskList = ({
-  tasks,
+const NoteList = ({
+  notes,
   title,
   showTitle = true,
   showUsername = true,
 }) => {
-  if (!tasks.length) {
-    return <h3>No Tasks Yet</h3>;
+  if (!notes.length) {
+    return <h3>No Notes Yet</h3>;
   }
 
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
-      {tasks &&
-        tasks.map((task) => (
-          <div key={task._id} className="card mb-3">
+      {notes &&
+        notes.map((note) => (
+          <div key={note._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/task/${task._id}`}
+                  to={`/profiles/${note.noteAuthor}`}
                 >
-                  {task.taskAuthor} <br />
+                  {note.noteAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    task created on {task.createdAt}
+                    note created on {note.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                  task created on {task.createdAt}
+                  note created on {note.createdAt}
                   </span>
                 </>
               )}
             </h4>
             <div className="card-body bg-light p-2">
-              <p>{task.taskText}</p>
+              <p>{note.noteContent}</p>
             </div>
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/task/${task._id}`}
-            > Comments
-              {/* Join the discussion on this task. */}
-            </Link>
           </div>
         ))}
     </div>
   );
 };
 
-export default TaskList;
+export default NoteList;

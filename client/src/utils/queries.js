@@ -58,3 +58,13 @@ export const QUERY_SINGLE_TASK = gql`
   }
 `;
 
+export const QUERY_NOTES = gql`
+  query getNotes {
+    notes {
+      _id
+      noteContent
+      noteAuthor
+      createdAt
+    }
+  }
+`;

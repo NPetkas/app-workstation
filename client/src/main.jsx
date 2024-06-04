@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App.jsx";
 import Home from "./pages/Home";
 import Task from "./pages/Task";
+import Note from "./pages/Note";
 import SingleTask from './pages/SingleTask';
 // import Profile from './pages/Profile';
 import Signup from "./pages/Signup";
@@ -37,10 +38,10 @@ const router = createBrowserRouter([
         path: '/task/:taskId',
         element: <SingleTask />
       },
-      // {
-      //   path: '/me',
-      //   element: <Profile />
-      // },
+      {
+        path: '/note',
+        element: <Note />
+      },
       // {
       //   path: '/profiles/:profileId',
       //   element: <Profile />
