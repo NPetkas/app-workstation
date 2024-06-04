@@ -8,7 +8,6 @@ export const QUERY_PROFILES = gql`
     }
   }
 `;
-
 export const QUERY_SINGLE_PROFILE = gql`
   query singleProfile($userId: ID!) {
     user(userId: $userId) {
@@ -17,7 +16,6 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
-
 export const QUERY_ME = gql`
   query me {
     me {
@@ -26,7 +24,6 @@ export const QUERY_ME = gql`
     }
   }
 `;
-
 export const QUERY_TASKS = gql`
   query getTasks {
     tasks {
@@ -43,3 +40,33 @@ export const QUERY_TASKS = gql`
     }
   }
 `;
+
+
+export const QUERY_SINGLE_TASK = gql`
+  query getSingleTask($taskId: ID!) {
+    tasks(taskId: $taskId) {
+      _id
+      taskText
+      taskAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
+export const QUERY_NOTES = gql`
+  query getNotes {
+    notes {
+      _id
+      noteContent
+      noteAuthor
+      createdAt
+    }
+  }
+`;
+

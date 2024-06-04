@@ -1,6 +1,6 @@
 // src/schema/resolvers.js
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Task } = require("../models");
+const { User, Task, Note } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -14,6 +14,13 @@ const resolvers = {
     tasks: async (parent, { username }) => {
       const params = username ? { username } : {};
       return Task.find(params).sort({ createdAt: -1 });
+    },
+    task: async (parent, { taskId }) => {
+      return Task.findOne({ _id: taskId });
+    },
+    notes: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Note.find(params).sort({ createdAt: -1 });
     },
   },
   Mutation: {
@@ -76,6 +83,40 @@ const resolvers = {
       throw AuthenticationError;
     },
 
+    addNote: async (parent, { noteContent }, context) => {
+      if (context.user) {
+        const note = await Note.create({
+          noteContent,
+          noteAuthor: context.user.name,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { notes: note._id } }
+        );
+
+        return note;
+      }
+      throw AuthenticationError;
+    },
+
+    removeNote: async (parent, { noteId }, context) => {
+      if (context.user) {
+        const note = await Note.findOneAndDelete({
+          _id: noteId,
+          noteAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { notes: note._id } }
+        );
+
+        return note;
+      }
+      throw AuthenticationError;
+    },
+
     addComment: async (parent, { taskId, commentText }, context) => {
       if (context.user) {
         return Task.findOneAndUpdate(
@@ -112,6 +153,10 @@ const resolvers = {
       throw AuthenticationError;
     },
 
+    
+
+    
+
     // addWorkstation: async (parent, { userId, name, description }) => {
     //   return User.findByIdAndUpdate(
     //     userId,
@@ -127,6 +172,8 @@ const resolvers = {
     //       );
     //     },
   },
+
+  
 };
 
 module.exports = resolvers;

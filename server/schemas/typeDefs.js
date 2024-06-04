@@ -9,6 +9,9 @@ const typeDefs = gql`
     password: String
     token: String
     workstations: [Workstation!]
+    tasks: [Task]!
+    notes: [Note]!
+
   }
 
   type Workstation {
@@ -23,6 +26,13 @@ const typeDefs = gql`
     taskAuthor: String
     createdAt: String
     comments: [Comment]!
+  }
+
+  type Note {
+    _id: ID
+    noteContent: String
+    noteAuthor: String
+    createdAt: String
   }
 
   type Comment {
@@ -43,6 +53,8 @@ const typeDefs = gql`
     workstation(id: ID!): Workstation
     tasks(username: String): [Task]
     task(taskId: ID!): Task
+    notes(username: String): [Note]
+    note(noteId: ID!): Note
   }
 
   type Mutation {
@@ -52,6 +64,8 @@ const typeDefs = gql`
     removeTask(taskId: ID!): Task
     addComment(taskId: ID!, commentText: String!): Task
     removeComment(taskId: ID!, commentId: ID!): Task
+    addNote(noteContent: String!): Note
+    removeNote(noteId: ID!): Note
   }
 `;
 
