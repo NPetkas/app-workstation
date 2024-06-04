@@ -1719,22 +1719,18 @@ label form [type='radio'] {
 /* NEW CSS */
 
 .header {
-  /* text-align: center; */
-  justify-content: space-between;
-  justify-content: center;
   background-color: #e6e6e6;
   color: rgb(0, 0, 0);
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 30px;
-
  border: 1px solid black;
- font-size: 35px;
+ font-size: 45px;
  box-shadow: 2px 3px 5px #000000;
 }
 
 aside {
   background-color: white;
-  max-width: 20rem;
+  max-width: 23rem;
   text-align: center;
   border:  solid 1px #000000 ;
   border-radius: 5px;
@@ -1755,11 +1751,8 @@ body {
 .nav {
   display: flex;
   list-style: none;
-  padding: 0;
   justify-content: flex-end;
-  margin-top: 20px;
   font-size: 25px;
-  margin-bottom: 5px;
 }
 
 .nav-item {
