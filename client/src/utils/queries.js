@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_PROFILES = gql`
   query allProfiles {
@@ -41,6 +41,7 @@ export const QUERY_TASKS = gql`
   }
 `;
 
+
 export const QUERY_SINGLE_TASK = gql`
   query getSingleTask($taskId: ID!) {
     tasks(taskId: $taskId) {
@@ -68,3 +69,4 @@ export const QUERY_NOTES = gql`
     }
   }
 `;
+

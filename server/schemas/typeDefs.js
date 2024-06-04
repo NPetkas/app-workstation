@@ -48,8 +48,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [User]
-    user(_id: ID!): User
+    users: [User]!
+    user(userId: ID!): User
     workstation(id: ID!): Workstation
     tasks(username: String): [Task]
     task(taskId: ID!): Task
