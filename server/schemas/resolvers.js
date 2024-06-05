@@ -18,9 +18,11 @@ const resolvers = {
     task: async (parent, { taskId }) => {
       return Task.findOne({ _id: taskId });
     },
-    notes: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Note.find(params).sort({ createdAt: -1 });
+    notes: async (parent, { username }, context) => {
+      console.log(context.user);
+      if (context.user) {
+        return Note.find({noteAuthor: context.user.name}).sort({ createdAt: -1 });
+      }
     },
   },
   Mutation: {
@@ -101,17 +103,21 @@ const resolvers = {
     },
 
     removeNote: async (parent, { noteId }, context) => {
+      
+      console.log("note Id: ", noteId);
+    
       if (context.user) {
         const note = await Note.findOneAndDelete({
           _id: noteId,
-          noteAuthor: context.user.username,
         });
-
-        await User.findOneAndUpdate(
+        console.log("note: ", note);
+        
+        const user = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { notes: note._id } }
+          { $pull: { notes: noteId} },
+          { new: true}
         );
-
+        console.log(user)
         return note;
       }
       throw AuthenticationError;
