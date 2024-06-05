@@ -72,3 +72,16 @@ query Query($taskId: ID!) {
 
 
 
+
+
+export const QUERY_NOTES = gql`
+  query getNotes {
+    notes {
+      _id
+      noteContent
+      noteAuthor
+      createdAt
+    }
+  }
+`;
+

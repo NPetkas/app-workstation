@@ -88,6 +88,7 @@ export const ADD_TASK = gql`
   }
 `;
 
+
 export const REMOVE_COMMENT = gql`
 mutation Mutation($taskId: ID!, $commentId: ID!) {
   removeComment(taskId: $taskId, commentId: $commentId) {
@@ -104,6 +105,8 @@ mutation Mutation($taskId: ID!, $commentId: ID!) {
   }
 }
 `;
+
+
 
 export const ADD_NOTE = gql`
   mutation addNote($noteContent: String!) {
@@ -126,4 +129,5 @@ export const REMOVE_NOTE = gql`
     }
   }
 `;
+
 
