@@ -129,7 +129,7 @@ const resolvers = {
           { _id: taskId },
           {
             $addToSet: {
-              comments: { commentText, commentAuthor: context.user.username },
+              comments: { commentText, commentAuthor: context.user.name },
             },
           },
           {
@@ -148,8 +148,7 @@ const resolvers = {
           {
             $pull: {
               comments: {
-                _id: commentId,
-                commentAuthor: context.user.username,
+                _id: commentId
               },
             },
           },

@@ -14,15 +14,17 @@ const CommentForm = ({ taskId }) => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    console.log(Auth.getProfile())
     try {
       const { data } = await addComment({
         variables: {
           taskId,
           commentText,
-          commentAuthor: Auth.getProfile().data.name, // TODO: Display the user's username
+          commentAuthor: Auth.getProfile().data.name, 
         },
       });
+      // console.log('data', data)
+  
 
       setCommentText('');
     } catch (err) {

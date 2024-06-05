@@ -65,6 +65,7 @@ export const ADD_TASK = gql`
       comments {
         _id
         commentText
+        commentAuthor
       }
       }
     }
@@ -80,11 +81,31 @@ export const ADD_TASK = gql`
       comments {
         _id
         commentText
+        commentAuthor
         createdAt
       }
     }
   }
 `;
+
+
+export const REMOVE_COMMENT = gql`
+mutation Mutation($taskId: ID!, $commentId: ID!) {
+  removeComment(taskId: $taskId, commentId: $commentId) {
+    _id
+    comments {
+      _id
+      commentAuthor
+      commentText
+      createdAt
+    }
+    createdAt
+    taskAuthor
+    taskText
+  }
+}
+`;
+
 
 
 export const ADD_NOTE = gql`

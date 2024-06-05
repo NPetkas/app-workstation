@@ -18,7 +18,7 @@ const SingleTask = () => {
   });
 
   const task = data?.task || {};
-  console.log('task', task)
+  // console.log('task', task)
 
   if (loading) {
     return <div>Loading...</div>;
@@ -42,12 +42,12 @@ const SingleTask = () => {
             lineHeight: '1.5',
           }}
         >
-          {task.taskText} Task text should show up here
+          {task.taskText} 
         </blockquote>
       </div>
 
       <div className="my-5">
-        <CommentList comments={task.comments} />
+        <CommentList comments={task.comments} taskId={taskId}/>
       </div>
       <div className="comment-form m-3 p-4" style={{ border: '1px solid #1a1a1a' }}>
         <CommentForm taskId={task._id} />

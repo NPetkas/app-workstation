@@ -41,10 +41,21 @@ export const QUERY_TASKS = gql`
   }
 `;
 
+export const QUERY_NOTES = gql`
+  query getNotes {
+    notes {
+      _id
+      noteContent
+      noteAuthor
+      createdAt
+    }
+  }
+`;
+
 
 export const QUERY_SINGLE_TASK = gql`
-  query getSingleTask($taskId: ID!) {
-    tasks(taskId: $taskId) {
+query Query($taskId: ID!) {
+  task(taskId: $taskId) {
       _id
       taskText
       taskAuthor
@@ -59,6 +70,10 @@ export const QUERY_SINGLE_TASK = gql`
   }
 `;
 
+
+
+
+
 export const QUERY_NOTES = gql`
   query getNotes {
     notes {
@@ -69,3 +84,4 @@ export const QUERY_NOTES = gql`
     }
   }
 `;
+

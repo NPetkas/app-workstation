@@ -11,6 +11,7 @@ const typeDefs = gql`
     workstations: [Workstation!]
     tasks: [Task]!
     notes: [Note]!
+    comments: [Comment]!
 
   }
 
