@@ -36,8 +36,15 @@ export default function Nav() {
           </Link>
         </li>
 
-        {/* how would i add a conditional statement to sign out */}
-
+        <li className="nav-item">
+          <Link
+            to="/logout"
+            className="nav-link"
+          >
+            Logout
+          </Link>
+        </li>
+        
         <li className="nav-item">
           <Link
             to="/signup"
