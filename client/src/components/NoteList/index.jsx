@@ -60,7 +60,8 @@ const NoteList = ({
           <div className="card-body bg-light p-2">
             <p>{note.noteContent}</p>
           </div>
-          <button onClick={() => handleRemoveNote(note._id)}>
+          <button className="btn btn-primary btn-block py-3"
+          onClick={() => handleRemoveNote(note._id)}>
             Remove Note
           </button>
         </div>

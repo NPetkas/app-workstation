@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_NOTES, QUERY_TASKS } from "../utils/queries";
+import Calendar from "../components/Calendar";
 
 const Home = () => {
   const {
@@ -25,6 +26,9 @@ const Home = () => {
     <div className="container">
       <h1>Let's Get To Work!</h1>
 
+      <div className="calendar">
+        <Calendar />
+      </div>
       <div>
         <h3>Your Tasks</h3>
         {tasks.length ? (
