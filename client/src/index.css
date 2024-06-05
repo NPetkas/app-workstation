@@ -1846,3 +1846,17 @@ body {
   width: 50px; /* Adjust the width to make it small */
   height: auto; /* Maintain aspect ratio */
 }
+
+.components {
+  flex-wrap: wrap;
+display: inline-block;
+padding: 20px;
+margin-bottom: 30px;
+
+}
+
+.weatherwidget-io{
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px #000000;
+}

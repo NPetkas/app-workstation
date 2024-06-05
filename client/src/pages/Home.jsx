@@ -27,7 +27,7 @@ const Home = () => {
     <div className="container">
       <h1>Let's Get To Work!</h1>
 
-      <div className="calendar">
+      <div className="components">
         <Calendar />
         <Weather />
       </div>
