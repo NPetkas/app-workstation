@@ -1,11 +1,43 @@
 import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+
+import { REMOVE_TASK } from '../../utils/mutations';
+import { QUERY_ME } from '../../utils/queries';
 
 const TaskList = ({
   tasks,
   title,
   showTitle = true,
   showUsername = true,
+
 }) => {
+  // console.log('tasks', tasks)
+  const [removeTask, { error }] = useMutation
+  (REMOVE_TASK, {
+  
+    // refetchQueries: [
+    //   QUERY_ME,
+    //   'singleUser'
+    // ]
+  });
+
+
+  const handleRemoveTask = async (taskId) => {
+    // console.log('taskId', taskId)
+    
+    try {
+      const { data } = await removeTask({
+        variables: {
+          taskId: taskId,
+
+        },
+      });
+      window.location.reload();
+      
+    } catch (err) {
+      console.error(err);
+    }
+  };
   if (!tasks.length) {
     return <h3>No Tasks Yet</h3>;
   }
@@ -37,12 +69,18 @@ const TaskList = ({
             </h4>
             <div className="card-body bg-light p-2">
               <p>{task.taskText}</p>
+              <button
+                      className="btn btn-primary btn-block py-1"
+                      onClick={() => handleRemoveTask(task._id)}
+                    >
+                      Remove Task
+                </button>
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/task/${task._id}`}
             > Comments
-              {/* Join the discussion on this task. */}
+
             </Link>
           </div>
         ))}

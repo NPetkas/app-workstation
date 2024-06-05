@@ -8,8 +8,11 @@ const resolvers = {
     users: async () => {
       return User.find({});
     },
-    user: async (parent, { _id }) => {
-      return User.findById(_id);
+    user: async (parent, args, context) => {
+      if(context.user) {
+      return User.findById(context.user._id);
+      }
+
     },
     tasks: async (parent, { username }) => {
       const params = username ? { username } : {};
@@ -19,7 +22,6 @@ const resolvers = {
       return Task.findOne({ _id: taskId });
     },
     notes: async (parent, { username }, context) => {
-      console.log(context.user);
       if (context.user) {
         return Note.find({noteAuthor: context.user.name}).sort({ createdAt: -1 });
       }
@@ -72,7 +74,6 @@ const resolvers = {
       if (context.user) {
         const task = await Task.findOneAndDelete({
           _id: taskId,
-          taskAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -104,20 +105,20 @@ const resolvers = {
 
     removeNote: async (parent, { noteId }, context) => {
       
-      console.log("note Id: ", noteId);
+
     
       if (context.user) {
         const note = await Note.findOneAndDelete({
           _id: noteId,
         });
-        console.log("note: ", note);
+
         
         const user = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $pull: { notes: noteId} },
           { new: true}
         );
-        console.log(user)
+
         return note;
       }
       throw AuthenticationError;

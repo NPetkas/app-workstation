@@ -50,7 +50,7 @@ const typeDefs = gql`
 
   type Query {
     users: [User]!
-    user(userId: ID!): User
+    user: User
     workstation(id: ID!): Workstation
     tasks(username: String): [Task]
     task(taskId: ID!): Task

@@ -17,12 +17,23 @@ export const QUERY_SINGLE_PROFILE = gql`
   }
 `;
 export const QUERY_ME = gql`
-  query me {
-    me {
+query singleUser {
+  user {
+    email
+    name
+    tasks {
       _id
+      createdAt
+      taskAuthor
+      taskText
+    }
+    workstations {
+      _id
+      description
       name
     }
   }
+}
 `;
 export const QUERY_TASKS = gql`
   query getTasks {

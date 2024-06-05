@@ -8,6 +8,7 @@ import Task from "./pages/Task";
 import Note from "./pages/Note";
 import SingleTask from './pages/SingleTask';
 // import Profile from './pages/Profile';
+import Logout from "./components/Logout";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
@@ -46,11 +47,15 @@ const router = createBrowserRouter([
       {
         path: '/logout',
         element: <Logout />
+
+      }
+
       },
       // {
       //   path: '/profiles/:profileId',
       //   element: <Profile />
       // }
+
     ],
   },
 ]);
