@@ -12,6 +12,7 @@ import Logout from "./components/Logout";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
+import Logout from "./components/Logout";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,15 @@ const router = createBrowserRouter([
       {
         path: '/logout',
         element: <Logout />
+
       }
+
+      },
+      // {
+      //   path: '/profiles/:profileId',
+      //   element: <Profile />
+      // }
+
     ],
   },
 ]);

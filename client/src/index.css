@@ -1726,7 +1726,7 @@ label form [type="radio"] {
 /* NEW CSS */
 
 .header {
-  background-color: #e6e6e6;
+  background-color: #fefefe;
   color: rgb(0, 0, 0);
   padding: 30px;
   margin-bottom: 30px;
@@ -1746,7 +1746,11 @@ aside {
 }
 
 body {
+
   background-color: #8fa278;
+
+  background-color: #8FA278;
+
   font-family: Philosopher;
   scroll-behavior: smooth;
   margin: 0;
