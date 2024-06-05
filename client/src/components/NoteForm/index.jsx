@@ -39,20 +39,28 @@ const NoteForm = () => {
 
   return (
     <div>
-      <h3>YOUR NOTES</h3>
+      <h3>What's on your mind?</h3>
       {Auth.loggedIn() ? (
         <>
           <p className={`m-0 ${characterCount === 10000 || error ? 'text-danger' : ''}`}>
           </p>
-          <form onSubmit={handleFormSubmit}>
+          <form className="flex-row justify-center justify-space-between-md align-center" 
+          onSubmit={handleFormSubmit}>
+
+          <div className="col-12 col-lg-9">
             <textarea
               name="noteText"
               placeholder="Here's a new note..."
               value={noteText}
+              className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
               onChange={handleChange}
-              style={{ lineHeight: '1.5', resize: 'vertical' }}
+      
             />
-            <button type="submit">Save</button>
+             </div>
+             <div className="col-12 col-lg-3">
+            <button className="btn btn-primary btn-block py-3" type="submit">Save</button>
+            </div>
             {error && (
               <div className="bg-danger text-white p-3">{error.message}</div>
             )}

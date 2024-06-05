@@ -11,6 +11,7 @@ const typeDefs = gql`
     workstations: [Workstation!]
     tasks: [Task]!
     notes: [Note]!
+    comments: [Comment]!
 
   }
 
@@ -53,7 +54,7 @@ const typeDefs = gql`
     workstation(id: ID!): Workstation
     tasks(username: String): [Task]
     task(taskId: ID!): Task
-    notes(username: String): [Note]
+    notes: [Note]
     note(noteId: ID!): Note
   }
 

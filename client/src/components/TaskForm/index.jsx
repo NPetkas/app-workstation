@@ -25,7 +25,7 @@ const TaskForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(Auth.getProfile())
+    // console.log(Auth.getProfile())
     try {
       const { data } = await addTask({
         variables: {
@@ -51,7 +51,7 @@ const TaskForm = () => {
 
   return (
     <div>
-      <h3>YOUR TASKS</h3>
+      <h3>Create a task:</h3>
 
       {Auth.loggedIn() ? (
         <>
