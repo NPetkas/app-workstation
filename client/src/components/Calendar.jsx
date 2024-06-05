@@ -10,7 +10,7 @@ style={{border: '2px solid black',
 borderRadius: '5px',
 boxShadow: '0 2px 8px 1px black'
 }}
-width="600" height="500" 
+width="1000" height="400" 
 frameborder="0" 
 scrolling="no"
 allowFullScreen=""
