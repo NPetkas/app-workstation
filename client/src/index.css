@@ -1733,6 +1733,7 @@ label form [type="radio"] {
   border: 1px solid black;
   font-size: 45px;
   box-shadow: 2px 3px 5px #000000;
+  position: relative;
 }
 
 aside {
@@ -1745,7 +1746,7 @@ aside {
 }
 
 body {
-  background-color: rgb(179, 217, 199);
+  background-color: #8fa278;
   font-family: Philosopher;
   scroll-behavior: smooth;
   margin: 0;
@@ -1824,8 +1825,24 @@ body {
   justify-content: end;
 }
 
-.comment-card, .notes-form {
+.comment-card,
+.notes-form {
   background-color: white;
   border-radius: 5px;
   border: 1px solid black;
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align to the top */
+  margin-top: -14px; /* Add some top margin */
+  position: absolute;
+  left: 50%; /* Move to the horizontal center */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.logo img {
+  width: 50px; /* Adjust the width to make it small */
+  height: auto; /* Maintain aspect ratio */
 }

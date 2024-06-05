@@ -19,7 +19,7 @@ const TaskForm = () => {
       QUERY_TASKS,
       'getTasks',
       QUERY_ME,
-      'me'
+      'user'
     ]
   });
 

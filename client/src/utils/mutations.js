@@ -71,6 +71,23 @@ export const ADD_TASK = gql`
     }
   `;
 
+  export const REMOVE_TASK = gql`
+  mutation Mutation($taskId: ID!) {
+    removeTask(taskId: $taskId) {
+      _id
+      comments {
+        _id
+        commentAuthor
+        commentText
+        createdAt
+      }
+      createdAt
+      taskAuthor
+      taskText
+    }
+  }
+  `;
+
   export const ADD_COMMENT = gql`
   mutation addComment($taskId: ID!, $commentText: String!) {
     addComment(taskId: $taskId, commentText: $commentText) {
