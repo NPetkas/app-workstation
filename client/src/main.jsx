@@ -11,6 +11,7 @@ import SingleTask from './pages/SingleTask';
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
+import Logout from "./components/Logout";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/note',
         element: <Note />
+      },
+      {
+        path: '/logout',
+        element: <Logout />
       },
       // {
       //   path: '/profiles/:profileId',
