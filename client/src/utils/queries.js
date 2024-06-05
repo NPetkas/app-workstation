@@ -69,4 +69,3 @@ export const QUERY_NOTES = gql`
     }
   }
 `;
-
