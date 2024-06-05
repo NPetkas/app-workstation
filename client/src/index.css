@@ -1848,7 +1848,7 @@ body {
 }
 
 .components {
-  flex-wrap: wrap;
+flex-wrap: wrap;
 display: inline-block;
 padding: 20px;
 margin-bottom: 30px;
@@ -1857,6 +1857,6 @@ margin-bottom: 30px;
 
 .weatherwidget-io{
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 2px 3px 5px #000000;
 }
