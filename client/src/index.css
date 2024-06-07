@@ -1528,13 +1528,13 @@ label form [type="radio"] {
   .align-content-center-md {
     align-content: center;
   }
-  /* .spotify {
+  .components {
     width: 100%;
   }
 
-  .navers {
+  /* .navers {
     width: 100%;
-  } */
+  } */ 
 }
 
 /* col-lg */
@@ -1796,6 +1796,7 @@ body {
 .comment-form {
   border-radius: 5px;
   background-color: white;
+  box-shadow: 2px 3px 5px #000000;
 }
 
 .task-list,
@@ -1817,7 +1818,7 @@ body {
   /* align-items: start; */
   /* width: 50%; */
   /* flex-wrap: wrap; */
-  width: 400px;
+  width: 368px;
   height: 100px;
   display: flex;
   justify-content: flex-start;
@@ -1835,6 +1836,9 @@ body {
   border-radius: 5px;
   border: 1px solid black;
 }
+.notes-form{
+  box-shadow: 2px 3px 5px #000000;
+}
 
 .logo {
   display: flex;
@@ -1849,4 +1853,147 @@ body {
 .logo img {
   width: 50px; /* Adjust the width to make it small */
   height: auto; /* Maintain aspect ratio */
+}
+
+.components {
+display: inline;
+padding: 20px;
+margin-bottom: 30px;
+
+}
+
+.weatherwidget-io{
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 5px #000000;
+}
+
+h6 {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; /* Adjust the width and style as needed */
+  position: absolute;
+  top: 230px; /* Adjust the top position */
+  left: 18px;
+}
+
+h5 {
+  color: black; /* Reddish text color */
+  text-transform: uppercase; /* Uppercase text */
+  margin: 20px 0; /* Add some margin for spacing */
+  padding: 10px; /* Add padding for spacing */
+  background-color: #f9f9f9; /* Light gray background */
+
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  text-align: center; /* Center text horizontally */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  width: 800px;
+  margin-top: 10px;
+  box-shadow: 2px 3px 5px #000000;
+}
+
+h5:hover {
+  background-color: #c1c8bd; /* Reddish background on hover */
+  color: white; /* White text on hover */
+}
+
+.calendar-container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Adjust the height as needed */
+  margin-left: 40px;
+}
+
+.embedded-calendar {
+  position: absolute;
+  top: 1px;
+  left: 876px;
+  width: 288px;
+  height: 418px; /* Adjust the height as needed */
+  border: none;
+  border: 2px solid #5a7d50; /* Reddish border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 2px 3px 5px #000000;
+  overflow: hidden; /* Hide overflow content */
+  margin: 10px;
+  align-items: flex-end;
+}
+
+.container {
+  display: flex;
+}
+
+.card {
+  width: 800px;
+  box-shadow: 2px 3px 5px #000000;
+}
+
+.container-items {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.notes-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 300px;
+  left: -808px;
+  width: 120px;
+  height: 100%;
+}
+
+.calc {
+  width: 438px;
+  height: 305px; /* Adjust height as needed */
+  position: absolute;
+  left: 65px;
+  top: 271px;
+}
+
+.task-section {
+  margin-right: 10px;
+  
+}
+
+.calc iframe {
+  width: 50%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+}
+
+.google-search {
+  width: 138px;
+  height: 305px; /* Adjust height as needed */
+  position: absolute;
+  left: 65px;
+  top: 630px;
+}
+
+.trash-btn {
+  width: 40px;
+  height: 45px;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 0px 5px; 
+  transition: background-color 0.3s, color 0.3s, border-radius 0.3s; 
+}
+
+.trash-icon {
+  color: #ffffff; 
+  transition: color 0.3s;
+}
+
+.trash-btn:hover {
+  background-color: #d3d3d3;
+  border-radius: 0px 0px 0px 5px;
+}
+
+.trash-btn:hover .trash-icon {
+  color: #000000; 
 }
