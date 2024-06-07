@@ -395,7 +395,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 p {
@@ -1728,7 +1728,7 @@ label form [type="radio"] {
 .header {
   background-color: #fefefe;
   color: rgb(0, 0, 0);
-  padding: 30px;
+  padding: 25px;
   margin-bottom: 30px;
   border: 1px solid black;
   font-size: 45px;
@@ -1737,12 +1737,13 @@ label form [type="radio"] {
 }
 
 aside {
-  background-color: white;
+  background-color: #ffe9c9;
   max-width: 23rem;
   text-align: center;
   border: solid 1px #000000;
   border-radius: 5px;
   margin-bottom: 10px;
+  box-shadow: 2px 3px 5px #000000;
 }
 
 body {
@@ -1875,6 +1876,7 @@ h6 {
   position: absolute;
   top: 230px; /* Adjust the top position */
   left: 18px;
+  margin-top: 10px;
 }
 
 h5 {
@@ -1941,6 +1943,7 @@ display: inline-block;
 }
 
 .calc {
+  margin-top: 50px;
   width: 438px;
   height: 305px; /* Adjust height as needed */
   position: absolute;
@@ -1957,6 +1960,7 @@ margin-top: 40px;
 .calc iframe {
   width: 50%; 
   height: 100%;
+  box-shadow: 2px 3px 5px #000000;
 }
 
 .google-search {
@@ -1965,6 +1969,11 @@ margin-top: 40px;
   position: absolute;
   left: 65px;
   top: 630px;
+}
+
+.google-search input {
+  box-shadow: 2px 3px 5px #000000;
+  margin-top: 40px;
 }
 
 .trash-btn {
