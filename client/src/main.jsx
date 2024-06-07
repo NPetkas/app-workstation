@@ -13,7 +13,6 @@ import Logout from "./components/Logout";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
-import Logout from "./components/Logout";
 
 const router = createBrowserRouter([
   {
@@ -53,9 +52,6 @@ const router = createBrowserRouter([
       {
         path: '/forecast',
         element: <Forecast />
-
-
-
       }
 
       },
