@@ -47,19 +47,11 @@ const router = createBrowserRouter([
       {
         path: '/logout',
         element: <Logout />
-
       },
       {
         path: '/forecast',
         element: <Forecast />
       }
-
-      },
-      // {
-      //   path: '/profiles/:profileId',
-      //   element: <Profile />
-      // }
-
     ],
   },
 ]);
