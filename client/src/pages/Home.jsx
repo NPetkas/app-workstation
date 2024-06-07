@@ -23,106 +23,61 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h6>Let's Get To Work!</h6>
-      <div className="calendar-container">
-        <iframe
-          className="embedded-calendar"
-          src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles"
-        ></iframe>
-      </div>
-      <div className="calc">
-        <iframe src="http://calculator-1.com/outdoor/?f=666666&r=000000"></iframe>
-      </div>
+      <h1>Let's Get To Work!</h1>
 
-      <div className="google-search">
-        <form
-          action="https://www.google.com/search"
-          method="get"
-          target="_blank"
-        >
-          <input
-            type="text"
-            name="q"
-            placeholder="Search Google..."
-            style={{
-              width: "218px",
-              padding: "5px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-              marginBottom: "10px",
-            }}
-          />
-          <input
-            type="submit"
-            value="Search"
-            style={{
-              padding: "5px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-              background: "#5a7d50",
-              color: "white",
-            }}
-          />
-        </form>
-      </div>
-
-      <div className="container-items">
-        <div className="task-section">
-          <h5>Your Tasks</h5>
-          {tasks.length ? (
-            tasks.map((task) => (
-              <div key={task._id} className="card mb-3">
-                <h4 className="card-header bg-primary text-light p-2 m-0">
-                  <Link className="text-light" to={`/task/${task._id}`}>
-                    {task.taskAuthor} <br />
-                    <span style={{ fontSize: "1rem" }}>
-                      task created on {task.createdAt}
-                    </span>
-                  </Link>
-                </h4>
-                <div className="card-body bg-light p-2">
-                  <p>{task.taskText}</p>
-                </div>
-                <Link
-                  className="btn btn-primary btn-block btn-squared"
-                  to={`/task/${task._id}`}
-                >
-                  Comments
+      <div>
+        <h3>Your Tasks</h3>
+        {tasks.length ? (
+          tasks.map((task) => (
+            <div key={task._id} className="card mb-3">
+              <h4 className="card-header bg-primary text-light p-2 m-0">
+                <Link className="text-light" to={`/task/${task._id}`}>
+                  {task.taskAuthor} <br />
+                  <span style={{ fontSize: "1rem" }}>
+                    task created on {task.createdAt}
+                  </span>
                 </Link>
+              </h4>
+              <div className="card-body bg-light p-2">
+                <p>{task.taskText}</p>
               </div>
-            ))
-          ) : (
-            <h5>No Tasks Yet</h5>
-          )}
-        </div>
+              <Link
+                className="btn btn-primary btn-block btn-squared"
+                to={`/task/${task._id}`}
+              >
+                Comments
+              </Link>
+            </div>
+          ))
+        ) : (
+          <h3>No Tasks Yet</h3>
+        )}
       </div>
 
-      <div className="notes-section">
-        <div>
-          <h5>Your Notes</h5>
-          {notes.length ? (
-            notes.map((note) => (
-              <div key={note._id} className="card mb-3">
-                <h4 className="card-header bg-primary text-light p-2 m-0">
-                  <Link
-                    className="text-light"
-                    to={`/profiles/${note.noteAuthor}`}
-                  >
-                    {note.noteAuthor} <br />
-                    <span style={{ fontSize: "1rem" }}>
-                      note created on {note.createdAt}
-                    </span>
-                  </Link>
-                </h4>
-                <div className="card-body bg-light p-2">
-                  <p>{note.noteContent}</p>
-                </div>
+      <div>
+        <h3>Your Notes</h3>
+        {notes.length ? (
+          notes.map((note) => (
+            <div key={note._id} className="card mb-3">
+              <h4 className="card-header bg-primary text-light p-2 m-0">
+                <Link
+                  className="text-light"
+                  to={`/profiles/${note.noteAuthor}`}
+                >
+                  {note.noteAuthor} <br />
+                  <span style={{ fontSize: "1rem" }}>
+                    note created on {note.createdAt}
+                  </span>
+                </Link>
+              </h4>
+              <div className="card-body bg-light p-2">
+                <p>{note.noteContent}</p>
               </div>
-            ))
-          ) : (
-            <h5>No Notes Yet</h5>
-          )}
-        </div>
+            </div>
+          ))
+        ) : (
+          <h3>No Notes Yet</h3>
+        )}
       </div>
     </div>
   );

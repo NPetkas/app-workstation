@@ -1,4 +1,5 @@
 # app-workstation
+<<<<<<< HEAD
 
 ## Description
 
@@ -97,3 +98,5 @@ Email: [reginaldsbaker10@icloud.com](reginaldsbaker10@icloud.com)
 
 Email: [9certified@gmail.com](9certified@gmail.com)
        
+=======
+>>>>>>> parent of 3df6fac (Merge pull request #15 from NPetkas/code-updates)

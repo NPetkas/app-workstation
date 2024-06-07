@@ -9,6 +9,7 @@ const SpotifyPlaylist = () => {
       height="100%"
       justifyContent="flex-start"
       frameBorder="0"
+      allowFullScreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
     ></iframe>

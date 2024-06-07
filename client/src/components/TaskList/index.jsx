@@ -15,6 +15,10 @@ const TaskList = ({
   const [removeTask, { error }] = useMutation
   (REMOVE_TASK, {
   
+    // refetchQueries: [
+    //   QUERY_ME,
+    //   'singleUser'
+    // ]
   });
 
 
