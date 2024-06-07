@@ -2,7 +2,7 @@
 
 ## Description
 
-  WORKSTATION is fullstack application built to help with e a blog spot where you can find the latest and greatest in local talent and events.
+  WORKSTATION is a fullstack application built to help organize your day and thoughts all from the same place.
 
 
 ## Table of Contents
@@ -65,14 +65,14 @@ To contribute:
 
 
 
-## Demo
+## Application
 
 
 ![image]()
 
 [Link to App][def1]
 
-[def1]: 
+[def1]: https://app-workstation.onrender.com/
 
 
 
