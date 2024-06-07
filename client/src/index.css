@@ -1929,17 +1929,17 @@ h5:hover {
   box-shadow: 2px 3px 5px #000000;
 }
 
-.container-items {
+/* .container-items {
   display: flex;
   flex-direction: column;
   
-}
+} */
 
 .notes-section {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 300px;
+  margin-top: 30rem;
   left: -808px;
   width: 120px;
   height: 100%;
