@@ -1900,9 +1900,7 @@ h5:hover {
 
 .calendar-container {
   position: relative;
-  width: 100%;
-  height: 600px; /* Adjust the height as needed */
-  margin-left: 40px;
+
 }
 
 .embedded-calendar {
@@ -1912,7 +1910,6 @@ h5:hover {
   width: 288px;
   height: 418px; /* Adjust the height as needed */
   border: none;
-  border: 2px solid #5a7d50; /* Reddish border */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 2px 3px 5px #000000;
   overflow: hidden; /* Hide overflow content */
@@ -1920,26 +1917,24 @@ h5:hover {
   align-items: flex-end;
 }
 
-.container {
+/* .container {
   display: flex;
-}
+} */
 
 .card {
   width: 800px;
   box-shadow: 2px 3px 5px #000000;
 }
 
-/* .container-items {
-  display: flex;
-  flex-direction: column;
+.container-items {
+  /* display: flex; */
+display: inline-block;
+  /* flex-wrap: wrap; */
   
-} */
+}
 
 .notes-section {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-top: 30rem;
+  margin-top: 75px;
   left: -808px;
   width: 120px;
   height: 100%;
@@ -1949,18 +1944,19 @@ h5:hover {
   width: 438px;
   height: 305px; /* Adjust height as needed */
   position: absolute;
+  display: flex;
   left: 65px;
   top: 271px;
 }
 
 .task-section {
-  margin-right: 10px;
+margin-top: 40px;
   
 }
 
 .calc iframe {
-  width: 50%; /* Adjust width as needed */
-  height: 100%; /* Adjust height as needed */
+  width: 50%; 
+  height: 100%;
 }
 
 .google-search {
