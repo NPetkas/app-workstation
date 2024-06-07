@@ -31,7 +31,9 @@ const Home = () => {
         ></iframe>
       </div>
       <div className="calc">
-        <iframe src="http://calculator-1.com/outdoor/?f=666666&r=000000"></iframe>
+      <iframe width="219" height="302" src="http://calculator-1.com/outdoor/?f=666666&r=666666" 
+ 
+      ></iframe><br />
       </div>
 
       <div className="google-search">
