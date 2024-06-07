@@ -3,11 +3,11 @@ import Weather from "../components/Weather";
 
 //  what code would i add to refresh the page?
 
-const Forecast = () => {
+const Scheduler = () => {
 
   return (
     <div className="container">
-      <h1>Today's Forecast</h1>
+      <h1>Schedule Your Day!</h1>
 
       <div className="components">
         <Calendar />
@@ -19,4 +19,4 @@ const Forecast = () => {
 };
 
 
-export default Forecast;
+export default Scheduler;

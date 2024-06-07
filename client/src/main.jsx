@@ -4,7 +4,7 @@ import "./index.css";
 
 import App from "./App.jsx";
 import Home from "./pages/Home";
-import Forecast from "./pages/Forecast";
+import Scheduler from "./pages/Scheduler";
 import Task from "./pages/Task";
 import Note from "./pages/Note";
 import SingleTask from './pages/SingleTask';
@@ -49,8 +49,8 @@ const router = createBrowserRouter([
         element: <Logout />
       },
       {
-        path: '/forecast',
-        element: <Forecast />
+        path: '/scheduler',
+        element: <Scheduler />
       }
     ],
   },
