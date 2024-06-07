@@ -1746,7 +1746,11 @@ aside {
 }
 
 body {
+
   background-color: #8fa278;
+
+  background-color: #8FA278;
+
   font-family: Philosopher;
   scroll-behavior: smooth;
   margin: 0;

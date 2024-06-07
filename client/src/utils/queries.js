@@ -81,5 +81,3 @@ query Query($taskId: ID!) {
   }
 `;
 
-
-
