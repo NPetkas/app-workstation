@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { REMOVE_NOTE } from '../../utils/mutations';
 import { QUERY_NOTES } from '../../utils/queries';
 import Auth from '../../utils/auth';
+import { FaTrash } from 'react-icons/fa';
 
 const NoteList = ({
   notes,
@@ -60,8 +61,8 @@ const NoteList = ({
           <div className="card-body bg-light p-2">
             <p>{note.noteContent}</p>
           </div>
-          <button onClick={() => handleRemoveNote(note._id)}>
-            Remove Note
+          <button onClick={() => handleRemoveNote(note._id)} class='trash'>
+          <FaTrash />
           </button>
         </div>
       ))}
