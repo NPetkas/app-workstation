@@ -26,10 +26,10 @@ export default function Nav() {
             </li>
             <li className="nav-item">
               <Link
-                to="/forecast"
-                className={currentPage === "/forecast" ? "nav-link active" : "nav-link"}
+                to="/scheduler"
+                className={currentPage === "/scheduler" ? "nav-link active" : "nav-link"}
               >
-                Forecast
+                Scheduler
               </Link>
             </li>
             <li className="nav-item">
