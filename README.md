@@ -46,7 +46,7 @@
 - CSS
 - GraphQL
 - Express
-- Sequelize
+- MongoDB
 - Apollo Client/Server
 - REACT
 - Spotify API
@@ -86,14 +86,14 @@ Contact information for any questions:
 
 Github Profile: [https://github.com/NPetkas](https://github.com/NPetkas)
 
-Github Profile: []() 
+Github Profile: [https://github.com/westmarquest](https://github.com/westmarquest) 
 
-Github Profile: []()
+Github Profile: [https://github.com/rbaker4559](https://github.com/rbaker4559)
 
 
 Email: [nicopetkas@gmail.com](nicopetkas@gmail.com)
 
 Email: [reginaldsbaker10@icloud.com](reginaldsbaker10@icloud.com)
 
-Email: []()
+Email: [9certified@gmail.com](9certified@gmail.com)
        
