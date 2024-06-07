@@ -16,4 +16,6 @@ data-shadow="rgba(255, 252, 252, 0)" >LOS ANGELES WEATHER</a>
 );
 };
 
+
+
 export default Weather;

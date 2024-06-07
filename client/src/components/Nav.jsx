@@ -26,6 +26,14 @@ export default function Nav() {
             </li>
             <li className="nav-item">
               <Link
+                to="/forecast"
+                className={currentPage === "/forecast" ? "nav-link active" : "nav-link"}
+              >
+                Forecast
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/task"
                 className={currentPage === "/task" ? "nav-link active" : "nav-link"}
               >
