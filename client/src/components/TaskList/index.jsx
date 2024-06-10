@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import { FaTrash } from 'react-icons/fa';
 
 import { REMOVE_TASK } from '../../utils/mutations';
-import { QUERY_ME } from '../../utils/queries';
+
 
 const TaskList = ({
   tasks,
@@ -69,7 +70,7 @@ const TaskList = ({
                       className="btn btn-primary btn-block py-1"
                       onClick={() => handleRemoveTask(task._id)}
                     >
-                      Remove Task
+                     <FaTrash className="trash-icon" /> 
                 </button>
             </div>
             <Link

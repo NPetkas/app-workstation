@@ -3,7 +3,7 @@
 ## Description
 
   WORKSTATION was built to help organize your day to day activities and thoughts. The application has features
-  such a a calculator, Google Calender, task manager, thoughts or notes taker, 7-day forecast, and a spotify playlist.
+  such as a calculator, Google Calender, task manager, thoughts or notes taker, 7-day forecast, and a spotify playlist.
   A solid reference for starting your own fullstack app.
 
 
@@ -70,7 +70,8 @@ To contribute:
 ## Demo
 
 
-![image]()
+
+![image](./client/src/assets/screenshot.png)
 
 [Link to App][def1]
 

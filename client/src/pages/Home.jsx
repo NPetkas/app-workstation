@@ -28,6 +28,9 @@ const Home = () => {
         <iframe
           className="embedded-calendar"
           src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles"
+          style={{border: '1px solid black',
+            borderRadius: '5px',
+            boxShadow: '2px 3px 5px #000000'}}
         ></iframe>
       </div>
       <div className="calc">
@@ -48,7 +51,7 @@ const Home = () => {
             placeholder="Search Google..."
             style={{
               width: "218px",
-              padding: "5px",
+              padding: "1px",
               borderRadius: "5px",
               border: "1px solid #ccc",
               marginBottom: "10px",
@@ -58,7 +61,7 @@ const Home = () => {
             type="submit"
             value="Search"
             style={{
-              padding: "5px",
+              padding: "1px",
               borderRadius: "5px",
               border: "1px solid #ccc",
               background: "#5a7d50",
@@ -73,8 +76,8 @@ const Home = () => {
           <h5>Your Tasks</h5>
           {tasks.length ? (
             tasks.map((task) => (
-              <div key={task._id} className="card mb-3">
-                <h4 className="card-header bg-primary text-light p-2 m-0">
+              <div key={task._id} className="card mb-2">
+                <h4 className="card-header bg-primary text-light p-1 m-0">
                   <Link className="text-light" to={`/task/${task._id}`}>
                     {task.taskAuthor} <br />
                     <span style={{ fontSize: "1rem" }}>
@@ -105,7 +108,7 @@ const Home = () => {
           {notes.length ? (
             notes.map((note) => (
               <div key={note._id} className="card mb-3">
-                <h4 className="card-header bg-primary text-light p-2 m-0">
+                <h4 className="card-header bg-primary text-light p-1 m-0">
                   <Link
                     className="text-light"
                     to={`/profiles/${note.noteAuthor}`}
