@@ -6,7 +6,7 @@ import Weather from "../components/Weather";
 const Scheduler = () => {
 
   return (
-    <div className="container">
+    <div className="sched-container">
       <h1>Schedule Your Day!</h1>
 
       <div className="components">

@@ -61,9 +61,12 @@ const NoteList = ({
           <div className="card-body bg-light p-2">
             <p>{note.noteContent}</p>
           </div>
-          <button onClick={() => handleRemoveNote(note._id)} class='trash-btn'>
-           <FaTrash className="trash-icon" style={{ color: "#ffffff" }} /> 
-          </button>
+          <button
+                      className="btn btn-primary btn-block py-1"
+                      onClick={() => handleRemoveTask(task._id)}
+                    >
+                     <FaTrash className="trash-icon" /> 
+                </button>
         </div>
       ))}
     </div>

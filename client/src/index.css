@@ -1121,12 +1121,12 @@ a:hover {
 }
 
 form {
-  width: 100%;
+  width: 90%;
 }
 
 form .form-group {
-  display: block;
-  width: 100%;
+  /* display: block; */
+  width: 90%;
   margin: 0.625rem 0;
 }
 
@@ -1178,9 +1178,10 @@ label form [type="radio"] {
 
 .container {
   width: 85%;
-  max-width: 1200px;
+  /* max-width: 1000px; */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .container.container-fluid {
@@ -1728,46 +1729,60 @@ label form [type="radio"] {
 .header {
   background-color: #fefefe;
   color: rgb(0, 0, 0);
-  padding: 25px;
+  padding: 27px;
   margin-bottom: 30px;
   border: 1px solid black;
-  font-size: 45px;
+  font-size: 80px;
   box-shadow: 2px 3px 5px #000000;
-  position: relative;
+  /* position: relative; */
 }
 
 aside {
   background-color: #ffe9c9;
-  max-width: 23rem;
+  max-width: 25rem;
   text-align: center;
+  font-family: "Amatic SC", sans-serif;
+  /* font-style: normal; */
   border: solid 1px #000000;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   box-shadow: 2px 3px 5px #000000;
+  animation-name: title;
+  animation-duration: 2s;
+
 }
+
+
+@keyframes title {
+  from {background-color: black;}
+  to {background-color: #ffe9c9}
+}
+
 
 body {
 
-  background-color: #8fa278;
-
-  background-color: #8FA278;
-
+  background: rgb(123,192,207);
+  background: linear-gradient(0deg, rgba(123,192,207,1) 0%, rgba(143,162,120,1) 90%);
+  
   font-family: Philosopher;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   font-size: 16px;
   color: #1a1a1a;
+  background-size: 100% 100%;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 450;
 }
 
 .nav {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  font-size: 25px;
+  font-size: 40px;
   height: 80px;
   flex-wrap: wrap;
-  padding-bottom: 100px;
+  font-family: "Amatic SC", sans-serif;
 }
 
 .nav-link {
@@ -1816,18 +1831,13 @@ body {
 }
 
 .spotify {
-  /* align-items: start; */
-  /* width: 50%; */
-  /* flex-wrap: wrap; */
   width: 368px;
   height: 100px;
   display: flex;
-  justify-content: flex-start;
 }
 
 .navers {
   display: flex;
-  /* width: 50%; */
   justify-content: end;
 }
 
@@ -1842,26 +1852,36 @@ body {
 }
 
 .logo {
-  display: flex;
+  /* display: flex; */
   justify-content: center; /* Center horizontally */
-  align-items: flex-start; /* Align to the top */
-  margin-top: -14px; /* Add some top margin */
+  margin-top: -80px; /* Add some top margin */
   position: absolute;
   left: 50%; /* Move to the horizontal center */
   transform: translateX(-50%); /* Center horizontally */
+  border-radius: 20px;
 }
 
 .logo img {
-  width: 50px; /* Adjust the width to make it small */
+  width: 130px; /* Adjust the width to make it small */
   height: auto; /* Maintain aspect ratio */
 }
 
 .components {
+display: flex;
 display: inline;
 padding: 20px;
-margin-bottom: 30px;
-
+margin-bottom: 50px;
+position: relative;
+overflow: hidden;
+width: 100%;
+padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
+
+.sched-container {
+  margin-bottom: 100px;
+}
+
+
 
 .weatherwidget-io{
   margin-top: 20px;
@@ -1870,13 +1890,17 @@ margin-bottom: 30px;
 }
 
 h6 {
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000; /* Adjust the width and style as needed */
+  color: rgb(0, 0, 0);
   position: absolute;
   top: 230px; /* Adjust the top position */
-  left: 18px;
-  margin-top: 10px;
+  left: 33px;
+  font-size: 30px;
+  margin-top: 87px;
+padding: 4px;
+border: 1px solid black;
+  box-shadow: 2px 3px 5px #000000;
+  border-radius: 10px;
+  background-color: #ffe9c9;
 }
 
 h5 {
@@ -1885,7 +1909,6 @@ h5 {
   margin: 20px 0; /* Add some margin for spacing */
   padding: 10px; /* Add padding for spacing */
   background-color: #f9f9f9; /* Light gray background */
-
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
   text-align: center; /* Center text horizontally */
@@ -1908,20 +1931,21 @@ h5:hover {
 .embedded-calendar {
   position: absolute;
   top: 1px;
-  left: 876px;
+  left: 840px;
   width: 288px;
   height: 418px; /* Adjust the height as needed */
   border: none;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 2px 3px 5px #000000;
-  overflow: hidden; /* Hide overflow content */
-  margin: 10px;
+  /* overflow: hidden; Hide overflow content */
+margin-top: 37px;
   align-items: flex-end;
 }
 
-/* .container {
-  display: flex;
-} */
+.container {
+max-width: fit-content;
+
+}
 
 .card {
   width: 800px;
@@ -1931,49 +1955,47 @@ h5:hover {
 .container-items {
   /* display: flex; */
 display: inline-block;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   
 }
 
 .notes-section {
   margin-top: 75px;
-  left: -808px;
-  width: 120px;
-  height: 100%;
 }
 
 .calc {
-  margin-top: 50px;
+  margin-top: 120px;
+  margin-left: -20px;
   width: 438px;
   height: 305px; /* Adjust height as needed */
   position: absolute;
-  display: flex;
-  left: 65px;
+flex-wrap: wrap;
+  left: 60px;
   top: 271px;
 }
 
 .task-section {
 margin-top: 40px;
-  
+margin-right: 150px;
 }
 
 .calc iframe {
-  width: 50%; 
-  height: 100%;
+  /* width: 50%; 
+  height: 100%; */
   box-shadow: 2px 3px 5px #000000;
 }
 
 .google-search {
   width: 138px;
-  height: 305px; /* Adjust height as needed */
   position: absolute;
-  left: 65px;
+  left: 40px;
   top: 630px;
 }
 
 .google-search input {
   box-shadow: 2px 3px 5px #000000;
-  margin-top: 40px;
+  margin-top: 100px;
+  cursor: pointer;
 }
 
 .trash-btn {

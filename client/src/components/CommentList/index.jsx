@@ -1,4 +1,5 @@
 import { useMutation } from '@apollo/client';
+import { FaTrash } from 'react-icons/fa';
 
 import { REMOVE_COMMENT } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
@@ -52,11 +53,11 @@ const CommentList = ({ comments, taskId }) => {
                 </h5>
                 <p className="card-body">{comments.commentText}</p>
                 <button
-                      className="btn btn-primary btn-block py-3"
-                      onClick={() => handleRemoveComment(comments._id)}
+                      className="btn btn-primary btn-block py-1"
+                      onClick={() => handleRemoveTask(task._id)}
                     >
-                      Remove Comment
-                    </button>
+                     <FaTrash className="trash-icon" /> 
+                </button>
               </div>
             </div>
           ))}

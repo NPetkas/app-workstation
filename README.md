@@ -2,7 +2,9 @@
 
 ## Description
 
-  WORKSTATION is fullstack application built to help with e a blog spot where you can find the latest and greatest in local talent and events.
+  WORKSTATION was built to help organize your day to day activities and thoughts. The application has features
+  such as a calculator, Google Calender, task manager, thoughts or notes taker, 7-day forecast, and a spotify playlist.
+  A solid reference for starting your own fullstack app.
 
 
 ## Table of Contents
@@ -68,11 +70,12 @@ To contribute:
 ## Demo
 
 
-![image]()
+
+![image](./client/src/assets/screenshot.png)
 
 [Link to App][def1]
 
-[def1]: 
+[def1]: https://app-workstation.onrender.com/
 
 
 
