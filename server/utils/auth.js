@@ -1,7 +1,11 @@
 const { GraphQLError } = require("graphql");
 const jwt = require("jsonwebtoken");
+require('dotenv').config();
 
-const secret = "mysecret";
+const secret = process.env.SECRET;
+if (!secret) {
+  throw new Error("Secret key must have a value");
+}
 const expiration = "2h";
 
 module.exports = {
