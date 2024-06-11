@@ -34,7 +34,8 @@ const Home = () => {
         ></iframe>
       </div>
       <div className="calc">
-      <iframe width="219" height="302" src="http://calculator-1.com/outdoor/?f=666666&r=666666" 
+      <iframe width="219" height="302" 
+      src="https://calculator-1.com/outdoor/?f=666666&r=666666" 
  
       ></iframe><br />
       </div>
