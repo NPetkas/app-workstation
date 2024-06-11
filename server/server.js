@@ -14,6 +14,10 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
+console.log("NODE_ENV:", process.env);
+console.log("Environment Variables:");
+console.log("PORT:", process.env.PORT);
+console.log("NODE_ENV:", process.env.NODE_ENV);
 
 const startApolloServer = async () => {
   await server.start();
@@ -44,5 +48,5 @@ const startApolloServer = async () => {
   });
 };
 
-// Call the async function to start the server
+
 startApolloServer();
