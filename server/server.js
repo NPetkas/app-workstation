@@ -15,6 +15,11 @@ const server = new ApolloServer({
   resolvers,
 });
 
+console.log("Environment Variables:");
+console.log("PORT:", process.env.PORT);
+console.log("NODE_ENV:", process.env.NODE_ENV);
+// Add other environment variables as needed
+
 const startApolloServer = async () => {
   await server.start();
 
